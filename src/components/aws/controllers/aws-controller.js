@@ -17,6 +17,15 @@ class AWSController {
       acl: 'bucket-owner-full-control',
       ContentType: 'image/jpg',
     };
+
+    this.s3.getSignedUrl('putObject', parameters, function(err, url){
+      if(err){
+        console.log('wow! something went wrong here')
+        res.json({msg: 'hmm theres an error'})
+      } else {
+        fileurls.push(url)
+      }
+    })
   }
 }
 
