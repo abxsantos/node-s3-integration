@@ -1,0 +1,46 @@
+{
+  "name": "setup-nodejs-project",
+  "version": "1.0.0",
+  "description": "api basic studies",
+  "main": "index.js",
+  "author": "Mari Mattos & Ale Santos",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "build": "npm-run-all clean transpile",
+    "transpile": "babel ./src --out-dir build",
+    "clean": "rimraf build",
+    "start": "node ./build/start.js",
+    "start-dev": "nodemon ./src/start.js",
+    "debug": "nodemon --inspect ./src/server.js",
+    "test": "jest --no-cache",
+    "test-cov": "jest --coverage",
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "setupFilesAfterEnv": [
+      "./src/test/setup.js"
+    ]
+  },
+  "dependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "dotenv": "^8.2.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^26.3.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "sucrase": "^3.15.0",
+    "supertest": "^4.0.2"
+  }
+}
