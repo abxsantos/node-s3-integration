@@ -19,8 +19,8 @@ class AWSController {
         console.log('wow! something went wrong here');
         res.json({ msg: 'hmm theres an error' });
       } else {
-        fileurls[0] = url;
-        console.log(`Presigned URL: ${this.fileurls}`);
+        fileurls.push(url)
+        console.log(`Presigned URL: ${fileurls}`);
         res.json({
           success: true,
           message: 'AWS SDK S3 Pre-signed urls generated successfully.',
