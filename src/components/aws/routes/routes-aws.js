@@ -3,6 +3,6 @@ import AWSController from '../controllers/aws-controller';
 
 const awsRouter = Router();
 
-awsRouter.get('/upload-to-s3', AWSController.getPresignedUrl);
+awsRouter.get('/get_presigned_url', AWSController.getPresignedUrl);
 
 export default awsRouter;

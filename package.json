@@ -1,5 +1,5 @@
 {
-  "name": "setup-nodejs-project",
+  "name": "nodejs-aws3",
   "version": "1.0.0",
   "description": "api basic studies",
   "main": "index.js",
@@ -46,6 +46,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.4.2",

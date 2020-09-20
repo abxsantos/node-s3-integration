@@ -4,15 +4,18 @@ Basic shell script to quickly setup NodeJS projects
 ### Usage
 - Clone this repository
 ```
-git clone https://github.com/abxsantos/setup-nodejs-project.git
+git clone https://github.com/marianasmmattos/nodejs-aws3
 ```
-- Create and enter the project directory 
+- Enter the project directory
 ```
-mkdir my-node-project && cd my-node-project
+cd nodejs-aws3
 ```
-- Run the script in a bash shell
+- Create a .env file or set the environment variables as seen in .env.example
+- Run the project
 ```
-# ../setup-nodejs-project/setup-nodejs-script.sh
+npm run start-dev
 ```
-- Follow the instruction on your terminal
-- Happy hacking!
+- Test the project
+```
+npm test
+```

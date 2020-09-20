@@ -8,6 +8,7 @@ class App {
     this.server = express();
     this.middlewares();
     this.routes();
+    this.server.use(errorHandler);
   }
 
   middlewares() {
@@ -17,7 +18,6 @@ class App {
 
   routes() {
     this.server.use(awsRouter);
-    this.server.use(errorHandler);
   }
 }
 
