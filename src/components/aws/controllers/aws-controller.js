@@ -8,7 +8,7 @@ class AWSController {
     const fileurls = [];
     const awsPresignedParameters = awsPresignedParametersConfig;
     const s3 = s3Config;
-    s3.getSignedUrl('putObject', awsPresignedParameters, function (err, url) {
+    s3.getSignedUrl('putObject', awsPresignedParameters, (err, url) => {
       if (err) {
         console.log('wow! something went wrong here');
         res.status(400).json({ msg: 'hmm theres an error' });

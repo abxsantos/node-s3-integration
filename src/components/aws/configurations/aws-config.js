@@ -1,4 +1,5 @@
 import AWS from 'aws-sdk';
+
 require('dotenv').config();
 
 export const s3Config = new AWS.S3({
