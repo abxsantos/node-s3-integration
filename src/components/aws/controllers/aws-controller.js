@@ -6,16 +6,14 @@ import {
 class AWSController {
   static async getPresignedUrl(req, res) {
     const fileurls = [];
-    const awsPresignedParameters = awsPresignedParametersConfig;
+    const awsPresignedParameters = awsPresignedParametersConfig(req.body.fileName);
     const s3 = s3Config;
     s3.getSignedUrl('putObject', awsPresignedParameters, (err, url) => {
       if (err) {
-        console.log('wow! something went wrong here');
-        res.status(400).json({ msg: 'hmm theres an error' });
+        res.status(400).send('hmm theres an error');
       } else {
         fileurls.push(url);
-        console.log(`Presigned URL: ${fileurls}`);
-        res.status(201).json({
+        res.status(201).send({
           success: true,
           message: 'AWS SDK S3 Pre-signed urls generated successfully.',
           urls: fileurls,
