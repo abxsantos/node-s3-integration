@@ -4,6 +4,10 @@ import {
   s3Config,
 } from '../configurations/aws-config';
 
+/**
+ * Controller for the AWS routes.
+ * @property {method} getPresignedUrl Method used to fetch a presigned URL.
+ */
 class AWSController {
   static async getPresignedUrl(req, res, next) {
     const fileurls = [];
