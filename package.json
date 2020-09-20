@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-aws3",
+  "name": "nodejs-aws-s3-api",
   "version": "1.0.0",
   "description": "api basic studies",
   "main": "index.js",
